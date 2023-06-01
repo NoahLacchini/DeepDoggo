@@ -1,0 +1,12 @@
+
+#1 let's create the dog index
+
+bowtie2-build /home/zaamos/Bureau/seq/datasets/ref_seq/ROS_Cfam.fna chien
+
+#1' let's create the dog index
+
+bowtie2-build /home/zaamos/Bureau/seq/datasets/ref_seq/refseq_phi.fasta phi
+
+#2  bowtie mapping
+
+bowtie2 -x <DIR/TO/INDEX> -1 <DIR/TO/PAIRED/R1.FASTQ> -2 <DIR/TO/PAIRED/R1.FASTQ> -S <DIR/TO/OUTPUT/OUTPUTE_NAME.SAM>
